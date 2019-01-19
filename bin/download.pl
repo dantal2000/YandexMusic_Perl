@@ -49,5 +49,5 @@ $md5_hash = md5_hex($string_to_hash);
 
 $third_URL = "https://$host/get-mp3/$md5_hash/". $ts . $path . "?track-id=$track_id";
 print "third_url = $third_URL\n";
-system("curl --url \"$third_URL\" -o $track_id.mp3 -A \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0 Waterfox/52.0\" --header \"Accept-Encoding: gzip, deflate\"");
+system("curl --url \"$third_URL\" -o $track_id.mp3");
 
