@@ -15,9 +15,9 @@ print "track_id = $track_id\n";
 # Quaility = {0,1}. Do as you want it to be
 $quality = 0;
 
-$first_URL = "https://music.yandex.ru/api/v2.1/handlers/track/$track_id/track/download/m";
+$first_URL = "https://music.yandex.ru/api/v2.1/handlers/track/$track_id/track/download/m?hq=$quality";
 print "first_url = $first_URL\n";
-$first_json = `curl --url $first_URL --get -d "hq=1" --header "X-Retpath-Y: https://music.yandex.ru/"`;
+$first_json = `curl --url $first_URL --header "X-Retpath-Y: https://music.yandex.ru/"`;
 print "first_json = $first_json\n";
 
 $second_URL = (JSON->new->utf8->decode($first_json))->{src};
