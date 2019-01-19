@@ -25,7 +25,7 @@ $quality = 0;
 
 $first_URL = "https://music.yandex.ru/api/v2.1/handlers/track/$track_id/track/download/m?hq=$quality";
 #print "first_url = $first_URL\n";
-$first_json = `curl --url $first_URL --header "X-Retpath-Y: https://music.yandex.ru/"`;
+$first_json = `curl -s --url $first_URL --header "X-Retpath-Y: https://music.yandex.ru/"`;
 #print "first_json = $first_json\n";
 
 $second_URL = (JSON->new->utf8->decode($first_json))->{src};
@@ -34,7 +34,7 @@ $second_URL = (JSON->new->utf8->decode($first_json))->{src};
 $second_URL .= "&$_" foreach @second_get_data;
 #print "secon_url = $second_URL";
 
-$second_json_string = `curl --url "$second_URL"`;
+$second_json_string = `curl -s --url "$second_URL"`;
 #print "second_json_string = $second_json_string";
 
 $second_json = JSON->new->utf8->decode($second_json_string);
