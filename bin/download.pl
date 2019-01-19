@@ -12,6 +12,14 @@ if (@ARGV != 1) {
 $track_id = $ARGV[0];
 print "track_id = $track_id\n";
 
+# id is a number
+if (! ($track_id =~ /^\d+\z/)) {
+	# А-а-й мне нужен номер!!!
+	print "A number expected!\n";
+	print "Usage: download.pl id\nWhere id - is the numeric id of file\n";
+	exit;
+}
+
 # Quaility = {0,1}. Do as you want it to be
 $quality = 0;
 
