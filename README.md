@@ -5,7 +5,23 @@
 
 Используя данное приложение, вы соглашаетесь с тем, что разработчик данного приложения не несет никакой ответственности за ваши действия; все, что вы делаете - на ваш страх и риск.
 
+### Зависимости
+* [JSON](https://metacpan.org/pod/JSON)
+
+### Пример использования
+``` sh
+$ perl bin/download.pl 38939725
+```
+
 ## [EN]
 This is the utility for download music from the service Yandex.Music. All rights to musical compositions belong to their creaters and the service Yandex.Music. This utility implements the same algorithm as in original service and emulates some requests to the server like in a desktop version of original service.
 
 Using this utility, you confirm that the developer of this utility don't have any responsibility for actions you taken; all you do is for your risk.
+
+### Depedencies
+* [JSON](https://metacpan.org/pod/JSON)
+
+### Use example
+``` sh
+$ perl bin/download.pl 38939725
+```
