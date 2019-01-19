@@ -7,6 +7,7 @@
 
 ### Зависимости
 * [JSON](https://metacpan.org/pod/JSON)
+* [curl](https://curl.haxx.se)
 
 ### Пример использования
 ``` sh
@@ -20,6 +21,7 @@ Using this utility, you confirm that the developer of this utility don't have an
 
 ### Depedencies
 * [JSON](https://metacpan.org/pod/JSON)
+* [curl](https://curl.haxx.se)
 
 ### Use example
 ``` sh
